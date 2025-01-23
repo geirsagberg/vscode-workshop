@@ -71,11 +71,10 @@
         </section>
 
         <section>
-          <h2>Disposables & Subscriptions</h2>
+          <h2>Subscriptions & Disposables</h2>
           <ul>
-            <li>Disposables manage extension resources</li>
-            <li>Used to clean up event listeners, commands, etc.</li>
-            <li>Added to extension context subscriptions</li>
+            <li>Register commands, event listeners</li>
+            <li>Clean up on unload</li>
           </ul>
           <pre><code class="javascript">
 let disposable = vscode.commands.registerCommand(

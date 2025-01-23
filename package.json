@@ -5,10 +5,6 @@
     "start": "live-server"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "live-server": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
   }
 }

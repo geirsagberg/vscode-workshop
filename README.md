@@ -15,6 +15,8 @@ bunx --package yo --package generator-code -- yo code
 
 Docs: https://code.visualstudio.com/api/get-started/your-first-extension
 
+API: https://code.visualstudio.com/api/references/vscode-api
+
 ## Oppgaver
 
 ### 1. Autokryptering mens du skriver
