@@ -36,6 +36,8 @@ Hint:
   - `vscode.window.activeTextEditor`
   - `vscode.commands.executeCommand`
 
+[Løsningsforslag](./ex-1/)
+
 ### 2. Fargedekorator
 
 Legg ved en fargedekorator når man skriver en CSS-farge eller en hexkode.
@@ -44,11 +46,15 @@ Hint:
 
 - `vscode.window.createTextEditorDecorationType`
 
+[Løsningsforslag](./ex-2/)
+
 ### 3. Lorem ipsum
 
 Hvis du skriver "lorem ipsum" og trykker enter, skal det komme masse lorem ipsum-tekst.
 
 Bonus: gjør det mulig å definere antall paragrafer, f.eks. `lorem ipsum*5`
+
+[Løsningsforslag](./ex-3/)
 
 ### 4. Emmet
 
