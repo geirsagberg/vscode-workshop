@@ -3,14 +3,14 @@
 Slides:
 
 ```
-bun install
-bun start
+npm install
+npm start
 ```
 
 ## Kom i gang
 
 ```
-bunx --package yo --package generator-code -- yo code
+npx --package yo --package generator-code -- yo code
 ```
 
 Docs: https://code.visualstudio.com/api/get-started/your-first-extension
