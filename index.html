@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VS Code extensions</title>
+
+    <!-- Reveal.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/highlightjs/styles/monokai-sublime.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <section>
+          <h1>VS Code extensions</h1>
+          <p>TRH Utvikleropplevelse</p>
+        </section>
+        <section>
+          <h2>Main Components</h2>
+          <ul>
+            <li>package.json - Extension Manifest</li>
+            <li>extension.ts - Entry Point</li>
+            <li>Contribution Points</li>
+            <li>Activation Events</li>
+          </ul>
+        </section>
+        <section>
+          <h2>package.json manifest</h2>
+          <pre><code class="json">{
+  ...
+  "contributes": {
+    "commands": [{
+      "command": "myExtension.helloWorld",
+      "title": "Hello World"
+    }],
+    "keybindings": [{
+      "command": "myExtension.helloWorld",
+      "key": "ctrl+shift+h",
+      "mac": "cmd+shift+h",
+      "when": "editorTextFocus"
+    }]
+  },
+  "activationEvents": [
+    "onLanguage:javascript",
+  ]
+}</code></pre>
+        </section>
+        <section>
+          <h2>extension.ts</h2>
+          <pre><code class="javascript">
+        export function activate(context) {
+            // Extension code here
+            console.log('Extension activated');
+        }
+
+        export function deactivate() {
+            // Cleanup code here
+        }</code></pre>
+        </section>
+
+        <section>
+          <h2>Disposables & Subscriptions</h2>
+          <ul>
+            <li>Disposables manage extension resources</li>
+            <li>Used to clean up event listeners, commands, etc.</li>
+            <li>Added to extension context subscriptions</li>
+          </ul>
+          <pre><code class="javascript">
+let disposable = vscode.commands.registerCommand(
+  'extension.command', () => {
+    // Command implementation
+});
+
+// Add to subscriptions
+context.subscriptions.push(disposable);
+          </code></pre>
+        </section>
+        <section>
+          <h2>Contribution Points</h2>
+          <ul>
+            <li>commands - Add commands to VS Code</li>
+            <li>menus - Add items to UI menus</li>
+            <li>keybindings - Add keyboard shortcuts</li>
+            <li>configuration - Add settings</li>
+            <li>views - Add custom views</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Activation Events</h2>
+          <ul>
+            <li>onLanguage - When a file type is opened</li>
+            <li>onView - When a view is opened</li>
+            <li>onStartupFinished - When VS Code is ready</li>
+            <li>* - On VS Code startup (do not use)</li>
+            <li>many more...</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Getting Started</h2>
+          <a
+            href="https://code.visualstudio.com/api/get-started/your-first-extension"
+          >
+            https://code.visualstudio.com/api/get-started/your-first-extension
+          </a>
+        </section>
+      </div>
+    </div>
+
+    <!-- Reveal.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs/highlight.pack.min.js"></script>
+    <!-- Reveal.js Core -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.min.js"></script>
+
+    <!-- RevealHighlight Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transitionSpeed: 'fast',
+        plugins: [RevealHighlight],
+      })
+    </script>
+  </body>
+</html>
