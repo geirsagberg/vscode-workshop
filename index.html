@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VS Code extensions</title>
+    <title>VS Code Extensions</title>
 
     <!-- Reveal.js CSS -->
     <link
@@ -22,16 +22,17 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- Slide 1 -->
         <section>
-          <h1>VS Code extensions</h1>
-          <p>TRH Utvikleropplevelse</p>
+          <h2>VS Code extensions</h2>
+          <p>Bekk Fagdag/Rotfest</p>
+          <p style="font-size: small">Geir Sagberg</p>
+          <p style="font-size: small">2025-05-23</p>
         </section>
         <section>
-          <h2>Main Components</h2>
+          <h2>Hovedkomponenter</h2>
           <ul>
-            <li>package.json - Extension Manifest</li>
-            <li>extension.ts - Entry Point</li>
+            <li>package.json - Extension manifest</li>
+            <li>extension.ts - Entry point</li>
             <li>Contribution Points</li>
             <li>Activation Events</li>
           </ul>
@@ -71,10 +72,10 @@
         </section>
 
         <section>
-          <h2>Subscriptions & Disposables</h2>
+          <h2>Subscriptions og Disposables</h2>
           <ul>
-            <li>Register commands, event listeners</li>
-            <li>Clean up on unload</li>
+            <li>Registrer kommandoer, hendelseslyttere</li>
+            <li>Rydd opp ved avlasting</li>
           </ul>
           <pre><code class="javascript">
 let disposable = vscode.commands.registerCommand(
@@ -89,25 +90,25 @@ context.subscriptions.push(disposable);
         <section>
           <h2>Contribution Points</h2>
           <ul>
-            <li>commands - Add commands to VS Code</li>
-            <li>menus - Add items to UI menus</li>
-            <li>keybindings - Add keyboard shortcuts</li>
-            <li>configuration - Add settings</li>
-            <li>views - Add custom views</li>
+            <li>commands - Legg til kommandoer i VS Code</li>
+            <li>menus - Legg til elementer i menyer</li>
+            <li>keybindings - Legg til tastatursnarveier</li>
+            <li>configuration - Legg til innstillinger</li>
+            <li>views - Legg til egendefinerte visninger</li>
           </ul>
         </section>
         <section>
           <h2>Activation Events</h2>
           <ul>
-            <li>onLanguage - When a file type is opened</li>
-            <li>onView - When a view is opened</li>
-            <li>onStartupFinished - When VS Code is ready</li>
-            <li>* - On VS Code startup (do not use)</li>
-            <li>many more...</li>
+            <li>onLanguage - Når en filtype åpnes</li>
+            <li>onView - Når en visning åpnes</li>
+            <li>onStartupFinished - Når VS Code er klar</li>
+            <li>* - Ved VS Code-oppstart (ikke bruk)</li>
+            <li>mange flere...</li>
           </ul>
         </section>
         <section>
-          <h2>Getting Started</h2>
+          <h2>Kom i gang</h2>
           <a
             href="https://code.visualstudio.com/api/get-started/your-first-extension"
           >
