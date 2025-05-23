@@ -78,6 +78,10 @@ og setter pekeren din inne i `<li>`-elementet.
 
 Lag en extension som støtter et begrenset utvalg forkortelser. Du kan velge om den skal erstatte ved Enter, Tab eller en annen key.
 
+[Løsningsforslag](./ex-4/)
+
 ### 5. LLM Autocomplete
 
 Hvor vanskelig er det å lage sin egen GitHub Copilot?
+
+[Løsningsforslag](./ex-5/)
